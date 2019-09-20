@@ -12,8 +12,19 @@
     （pass）
 
 ## 项目结构：
-    敬请期待！！！
-    （pass）
+```
+.
+├── hudongbaike     // scrapy爬虫项目路径
+│   └── hudongbaike
+│       └── spiders
+│          └── bk.py  //爬取搜索词
+│          └── bkc.py  //带入搜索词爬取内容
+├── data   // 数据存放路径
+│   └── query_list.csv //存放搜索词文件
+├── data_processing    // 数据清洗
+├── model    // 算法存放路径
+├── chatbot    // 问答机器人模块
+```
 
 ## 项目运行方式：
     敬请期待！！！
