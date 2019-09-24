@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from hudongbaike.items import HudongbaikeItem
-import re
 from tqdm import tqdm
 import scrapy
 import pandas as pd
@@ -17,7 +16,7 @@ class BkcSpider(scrapy.Spider):
             for row in df.itertuples(index=True, name='Pandas'):
                 name, url = getattr(row, "_1"), getattr(row, "_2")
                 pbar.update(1)
-                yield scrapy.Request(url, callback=self.parse, meta={"name":name})
+                yield scrapy.Request(url, callback=self.parse, meta={"name": name})
 
     def parse(self, response):
         item = HudongbaikeItem()
@@ -38,12 +37,15 @@ class BkcSpider(scrapy.Spider):
         item["name"] = name
         # 获取详细信息
         content = response.xpath('//div[@id="content"]//text()').extract()
-        title = response.xpath('//div[@class="content_h2 bac_no" or @class="content_h2"]//a[not(@class="bjbd")]/following-sibling::text()').extract()
+        title = response.xpath(
+            '//div[@class="content_h2 bac_no" or @class="content_h2"]//a[not(@class="bjbd")]/following-sibling::text()'
+        ).extract()
         title = [k for k in title if k != '\n' and k != '\t']
         key_idxs = [content.index(k) for k in title]
         key_idxs.append("")
-        key_idxs_zip = list(zip(key_idxs[:-1],key_idxs[1:]))
-        content_chunk = ["".join(content[start+1:]) if end == "" else "".join(content[start+1: end]) for start, end in key_idxs_zip]
-        base_info = dict(zip(title,content_chunk))
+        key_idxs_zip = list(zip(key_idxs[:-1], key_idxs[1:]))
+        content_chunk = ["".join(content[start + 1:]) if end == "" else "".join(content[start + 1: end]) for start, end
+                         in key_idxs_zip]
+        base_info = dict(zip(title, content_chunk))
         item["base_info"] = base_info
         yield item

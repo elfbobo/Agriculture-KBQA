@@ -28,16 +28,28 @@ class HudongbaikePipeline(object):
         self._sql, self._sql2, self._sql3, = None, None, None
 
     def process_item(self, item, spider):
+
         # 基本属性
-        for key, value in item['attr_data'].items():
+        self.Attr_info_insert(item)
+        # 基本简介
+        self.Base_info_insert(item)
+        # 详细信息
+        self.QA_info_insert(item)
+        return item
+
+    def Attr_info_insert(self, item):
+        for key, value in item["attr_data"].items():
             _sql = '''insert into Atterinfo(id, name, attr_key,attr_value) values(%s,%s,%s,%s)'''
             self.cursor.execute(_sql, (item['id'], item['name'], key, value))
-        # 基本简介
+            self.conn.commit()
+
+    def Base_info_insert(self, item):
         _sql2 = '''insert into Baseinfo(id, name, intro) values(%s,%s,%s)'''
         self.cursor.execute(_sql2, (item['id'], item['name'], item['intro']))
-        # 详细信息
+        self.conn.commit()
+
+    def QA_info_insert(self, item):
         for question, answer in item['base_info'].items():
             _sql3 = '''insert into QAdata(id, name, question, answer) values(%s,%s,%s,%s)'''
             self.cursor.execute(_sql3, (item['id'], item['name'], question, answer))
-        self.conn.commit()
-        return item
+            self.conn.commit()
