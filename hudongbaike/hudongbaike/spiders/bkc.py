@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from hudongbaike.items import HudongbaikeItem
-from tqdm import tqdm
+from tqdm import tqdm, tnrange
 import scrapy
 import pandas as pd
 import hashlib
@@ -12,8 +12,8 @@ class BkcSpider(scrapy.Spider):
 
     def start_requests(self):
         df = pd.read_csv("../data/query_list.csv", header=None)
-        with tqdm(total=df.shape[0]) as pbar:
-            for row in df.itertuples(index=True, name='Pandas'):
+        with tqdm(total=df.shape[0], ncols=100) as pbar:
+            for num,row in enumerate(df.itertuples(index=True, name='Pandas')):
                 name, url = getattr(row, "_1"), getattr(row, "_2")
                 pbar.update(1)
                 yield scrapy.Request(url, callback=self.parse, meta={"name": name})
