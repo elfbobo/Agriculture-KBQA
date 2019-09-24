@@ -1,18 +1,26 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for hudongbaike project
-#
-# For simplicity, this file contains only settings considered important or
-# commonly used. You can find more settings consulting the documentation:
-#
-#     https://doc.scrapy.org/en/latest/topics/settings.html
-#     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-#     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
 BOT_NAME = 'hudongbaike'
 
 SPIDER_MODULES = ['hudongbaike.spiders']
 NEWSPIDER_MODULE = 'hudongbaike.spiders'
+
+JOBDIR ="./hudongbaike/seen"
+
+ITEM_PIPELINES = {
+   'hudongbaike.pipelines.HudongbaikePipeline': 300,
+}
+
+LOG_LEVEL = "WARNING"
+
+#Mysql数据库的配置信息
+MYSQL_HOST = '127.0.0.1'
+MYSQL_DBNAME = 'agricultural_data'
+MYSQL_USER = 'root'
+MYSQL_PASSWD = ''
+
+MYSQL_PORT = 3306
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -20,7 +28,6 @@ NEWSPIDER_MODULE = 'hudongbaike.spiders'
 
 # Obey robots.txt rules
 # ROBOTSTXT_OBEY = True
-
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 
@@ -64,9 +71,6 @@ NEWSPIDER_MODULE = 'hudongbaike.spiders'
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'hudongbaike.pipelines.HudongbaikePipeline': 300,
-#}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html

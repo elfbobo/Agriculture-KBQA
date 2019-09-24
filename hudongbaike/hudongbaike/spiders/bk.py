@@ -8,7 +8,7 @@ from urllib.parse import quote, unquote
 
 class BkSpider(scrapy.Spider):
     name = 'bk'
-    allowed_domains = ['fenlei.baike.com']
+    allowed_domains = ['baike.com']
 
     def start_requests(self):
         base_urls = [

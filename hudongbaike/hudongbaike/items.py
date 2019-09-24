@@ -9,6 +9,8 @@ import scrapy
 
 
 class HudongbaikeItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    id = scrapy.Field()
+    intro = scrapy.Field()
+    attr_data = scrapy.Field()
+    base_info = scrapy.Field()
+    name = scrapy.Field()
