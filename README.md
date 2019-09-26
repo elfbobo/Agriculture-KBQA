@@ -9,9 +9,9 @@
 
 ## 项目结果展示：
 
-![](https://github.com/Crawler-y/Agriculture-KBQA/blob/master/guide.png)
-   敬请期待！！！
-  （pass）
+Neo4j数据库基本操作
+![](https://raw.githubusercontent.com/Crawler-y/Agriculture-KBQA/master/tool/guide.png)
+
 
 ## 项目结构：
 ```
