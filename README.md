@@ -8,10 +8,10 @@
 2. 对普通群众而言让他了解这些农产品的作用（健康方面），以及各种植物之间的关系起到科普的作用。
 
 ## 项目结果展示：
-图数据库基本操作：
-![](https://github.com/Crawler-y/Agriculture-KBQA/blob/master/tool/Neo4j基本操作.png)
-    敬请期待！！！
-    （pass）
+
+![](https://github.com/Crawler-y/Agriculture-KBQA/blob/master/guide.png)
+   敬请期待！！！
+  （pass）
 
 ## 项目结构：
 ```
