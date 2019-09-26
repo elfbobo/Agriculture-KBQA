@@ -9,7 +9,6 @@
 
 ## 项目结果展示：
 
-Neo4j数据库基本操作
 ![](https://raw.githubusercontent.com/Crawler-y/Agriculture-KBQA/master/tool/guide.png)
 
 
