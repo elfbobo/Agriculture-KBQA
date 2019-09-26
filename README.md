@@ -9,7 +9,7 @@
 
 ## 项目结果展示：
 图数据库基本操作：
-![](https://raw.githubusercontent.com/CrisJk/SomePicture/master/blog_picture/1541921074856.jpg)
+![](https://github.com/Crawler-y/Agriculture-KBQA/blob/master/tool/Neo4j基本操作.png)
     敬请期待！！！
     （pass）
 
