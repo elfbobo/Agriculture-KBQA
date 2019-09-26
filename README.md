@@ -8,6 +8,8 @@
 2. 对普通群众而言让他了解这些农产品的作用（健康方面），以及各种植物之间的关系起到科普的作用。
 
 ## 项目结果展示：
+图数据库基本操作：
+![](https://raw.githubusercontent.com/CrisJk/SomePicture/master/blog_picture/1541921074856.jpg)
     敬请期待！！！
     （pass）
 
