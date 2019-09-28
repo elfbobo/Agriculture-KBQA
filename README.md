@@ -9,10 +9,10 @@
 
 ## 项目结果展示：
 
-###操作说明
+### 操作说明
 ![](https://raw.githubusercontent.com/Crawler-y/Agriculture-KBQA/master/tool/guide.png)
 
-###图谱展示
+### 图谱展示
 ![](https://raw.githubusercontent.com/Crawler-y/Agriculture-KBQA/master/tool/show.png)
 
 ## 项目结构：
