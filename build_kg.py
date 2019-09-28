@@ -109,52 +109,12 @@ class GoodsKg:
 if __name__ == '__main__':
     handler = GoodsKg()
     graph = handler.g
-    tx = graph.begin()
-
-
-
-    # a = Node('Person', name='A')
-    # # b = Node('Person', name='B')
-    # # c = Node('Person', name='c')
-    # # d = Node('Person', name='d')
-    # e = Node('Person', name='Bas')
-    # # r1 = Relationship(a,'KNOWS', b)
-    # # r2 = Relationship(c,'KNOWS', d)
-    # # r3 = Relationship(a,'KNOWS', c)
-    # r4 = Relationship(a, 'KNOWS', e)
-    # tx.merge(r4, primary_label='Person',primary_key='name')
-    # tx.commit()
-
-
-
-    # s = a | b | c | r1 | r2 | r3
-    # graph.create(s)
-
-    # b.setdefault('location', '北京')
-    # b['location'] = '上海'
-    # b.setdefault('location', '北京')
-    # print(b)
-    # data = {
-    #     'name': 'Amy',
-    #     'age': 21
-    # }
-    # a.update(data)
-    # handler.g.create(a)
-    # a['sex'] = 8000
-    # handler.g.push(a)
-    # print(a)
-    # handler.run()
-    # a["age"] = 10
-    # handler.g.push(a)
-
-    # 查询
-    matcher = NodeMatcher(graph)
-    # # node = matcher.match("Ticket")#.where("_.name = 'A'")
-    # # # handler.g.delete(node)
-    # # print(list(node))
-    # # for n in node.__iter__():
-    # #     handler.g.delete(n)
-    # # a = graph.run('MATCH (p:Person) return p').data()
-    a = matcher.match("Person").where("_.name =~ 'B.*?'")
-    print(list(a))
-    # graph.match_one(r_type='KNOWS')
+    # a = Node("Preson",name="a")
+    # b = Node("reson", name="b")
+    # c = Node("eson", name="c")
+    # d = Node("son", name="d")
+    # r = Relationship(a, "part_of", b)
+    # r1 = Relationship(a, "part_of", c)
+    # r2 = Relationship(a, "part_of", d)
+    # s = a|b|c|d|r|r1|r2
+    graph.delete_all()
