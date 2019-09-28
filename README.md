@@ -9,8 +9,11 @@
 
 ## 项目结果展示：
 
+###操作说明
 ![](https://raw.githubusercontent.com/Crawler-y/Agriculture-KBQA/master/tool/guide.png)
 
+#图谱展示
+![](https://raw.githubusercontent.com/Crawler-y/Agriculture-KBQA/master/tool/show.png)
 
 ## 项目结构：
 ```
@@ -23,6 +26,7 @@
 ├── data   // 数据存放路径
 │   └── query_list.csv //存放搜索词文件
 ├── data_processing    // 数据清洗
+│   └── build_kg.ipynb //数据处理入库
 ├── model    // 算法存放路径
 ├── chatbot    // 问答机器人模块
 ├── tool    // 存放图片和文档说明
