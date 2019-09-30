@@ -1,0 +1,12 @@
+{
+	"keyword_corpus": [
+		"../data/produce.txt",
+		"../data/classify.txt",
+		"../data/person.txt",
+		"../data/belong.txt",
+		"../data/outline.txt",
+		"../data/location.txt",
+		"../data/catalogue.txt",
+		"../data/family.txt"
+	]
+}
