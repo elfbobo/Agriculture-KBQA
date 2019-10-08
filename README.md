@@ -15,6 +15,9 @@
 ### 图谱展示
 ![](https://raw.githubusercontent.com/Crawler-y/Agriculture-KBQA/master/tool/show.png)
 
+### 对话展示部分
+![](https://raw.githubusercontent.com/Crawler-y/Agriculture-KBQA/master/tool/chatbot.png)
+
 ## 项目结构：
 ```
 .
