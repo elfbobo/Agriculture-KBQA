@@ -25,10 +25,17 @@
 │          └── bkc.py  //带入搜索词爬取内容
 ├── data   // 数据存放路径
 │   └── query_list.csv //存放搜索词文件
+│   └── *.txt //存放关键词文件
 ├── data_processing    // 数据清洗
 │   └── build_kg.ipynb //数据处理入库
 ├── model    // 算法存放路径
 ├── chatbot    // 问答机器人模块
+│   └── Manger//调度模块
+│          └── start.py//主程序
+│   └── NLG //数据生成模块
+│   └── NLU //意图识别和实体识别模块
+│   └── config.json //配置信息
+│   └── question_processing.ipynb //历史测试文件
 ├── tool    // 存放图片和文档说明
 ```
 
